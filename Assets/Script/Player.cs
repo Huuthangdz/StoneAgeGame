@@ -87,13 +87,10 @@ public class Player : MonoBehaviour
         isDead = true;
         animator.SetTrigger("Die");
         rb.velocity = Vector2.zero;
+        OnDestroy();
         yield return new WaitForSeconds(0.8f);
         Time.timeScale = 0;
-
     }
-
-
-
     //private void handleMove()
     //{
     //    if (horizontal != 0)
@@ -130,6 +127,7 @@ public class Player : MonoBehaviour
     //        transform.localScale = localScale;
     //    }
     //}
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Heal"))
@@ -137,5 +135,9 @@ public class Player : MonoBehaviour
             HealthBar.heal(50);
             collision.gameObject.SetActive(false);
         }
+    }
+    public void OnDestroy()
+    {
+        rb = null;
     }
 }

@@ -48,6 +48,15 @@ public class PlayerMoverment : MonoBehaviour
         {
             Flip();
         }
+        if  (rb == null )
+        {
+            Debug.Log("rb is null");
+        }
+        else
+        {
+            Debug.Log("rb is not null");
+        } 
+            
     }
     private void Flip()
     {

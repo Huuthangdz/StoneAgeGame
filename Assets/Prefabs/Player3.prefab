@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 634268791718195896}
-        m_TargetAssemblyTypeName: LevelCompleteScript, Assembly-CSharp
+      - m_Target: {fileID: 3514364336158178956}
+        m_TargetAssemblyTypeName: LostCanvas, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 634268791718195899}
   - component: {fileID: 634268791718195898}
   - component: {fileID: 634268791718195897}
-  - component: {fileID: 634268791718195896}
+  - component: {fileID: 3514364336158178956}
   m_Layer: 5
   m_Name: LostLevelCanvas
   m_TagString: Untagged
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &634268791718195896
+--- !u!114 &3514364336158178956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,10 +248,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 634268791718195879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012068e74a2f1864f8b553b01f5c9d6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f5f1066ea7ce0548ad22ea471c1324b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelComplete: {fileID: 634268791718195879}
+  lostCanvasUI: {fileID: 634268791718195879}
 --- !u!1 &634268792040726148
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,8 +528,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 634268791718195896}
-        m_TargetAssemblyTypeName: LevelCompleteScript, Assembly-CSharp
+      - m_Target: {fileID: 3514364336158178956}
+        m_TargetAssemblyTypeName: LostCanvas, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
