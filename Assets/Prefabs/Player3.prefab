@@ -1442,7 +1442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d4b5a3849b7944ea6f7913a6698d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 634268793370328323}
+  Ground:
+    serializedVersion: 2
+    m_Bits: 64
   rb: {fileID: 634268793370328321}
+  LoseLevel: {fileID: 634268791718195879}
+  HealthBar: {fileID: 634268792975682328}
   animator: {fileID: 634268793370328323}
   groundCheck: {fileID: 8643496251881889727}
   Ground:

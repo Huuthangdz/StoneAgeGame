@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     private bool isDead;
 
     //[SerializeField] private Transform groundCheck;
-    [SerializeField] private Animator animator;
-    [SerializeField] private LayerMask Ground;
+    [SerializeField] public Animator animator;
+    [SerializeField] public LayerMask Ground;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private GameObject LoseLevel;
  
@@ -28,7 +28,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D component not found on " + gameObject.name);
+        }
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -86,8 +90,7 @@ public class Player : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
-        rb.velocity = Vector2.zero;
-        OnDestroy();
+        //GetComponent<PlayerMoverment>().OnDestroy();
         yield return new WaitForSeconds(0.8f);
         Time.timeScale = 0;
     }
@@ -136,8 +139,8 @@ public class Player : MonoBehaviour
             collision.gameObject.SetActive(false);
         }
     }
-    public void OnDestroy()
-    {
-        rb = null;
-    }
+    //    public void OnDestroy()
+    //{
+    //    rb = null;
+    //}
 }
