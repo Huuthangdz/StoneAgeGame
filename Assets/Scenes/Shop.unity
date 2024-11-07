@@ -3329,10 +3329,10 @@ MonoBehaviour:
   Selected:
   - name: Player01
     price: 0
-    isUnlock: 0
+    isUnlock: 1
   - name: Player02
     price: 80
-    isUnlock: 0
+    isUnlock: 1
   - name: Player03
     price: 100
     isUnlock: 0
